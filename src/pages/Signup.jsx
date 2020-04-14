@@ -124,9 +124,12 @@ class Signup extends Component {
                   type="password"
                   placeholder="Password"
                   name="password"
-                  pattern="[A-Za-z0-9_]$"
+                  pattern="[A-Za-z0-9]+$"
                   required
                 />
+                <FormText className="text-muted">
+                  Can only contain letters and numbers. Min 5.char
+                </FormText>
               </Form.Group>
 
               <Button variant="primary" type="submit">
