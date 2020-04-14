@@ -49,7 +49,7 @@ const Chat = ({ location }) => {
 
   const sendMessage = (event) => {
     event.preventDefault();
-    debugger;
+
     if (message) {
       socket.emit('sendMessage', message, () => setMessage(''));
     }
