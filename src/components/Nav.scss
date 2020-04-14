@@ -1,0 +1,16 @@
+nav {
+  background: transparent;
+  .collapse.navbar-collapse {
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+  }
+
+  .btn-light {
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 992px) {
+  /**/
+}
