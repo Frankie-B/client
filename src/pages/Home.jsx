@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
+import Default from '../layouts/Default';
 
 class Home extends Component {
-  constructor(props) {
-    super(props);
+  // constructor(props) {
+  //   super(props);
 
-    this.state = {};
-  }
+  //   this.state = {};
+  // }
 
   render() {
     return (
-      <div className="Home">
-        <h1 className="Home-title">Mentally.me</h1>
-      </div>
+      <Default>
+        <div className="Home">
+          <h1 className="Home-title">Mentally.me</h1>
+        </div>
+      </Default>
     );
   }
 }
