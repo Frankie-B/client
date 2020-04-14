@@ -4,7 +4,15 @@ class Signup extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      user: {
+        firstName: '',
+        lastName: '',
+        username: '',
+        email: '',
+        password: '',
+      },
+    };
   }
 
   render() {

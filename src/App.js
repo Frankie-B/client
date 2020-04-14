@@ -1,10 +1,10 @@
 import React from 'react';
 import Home from './pages/Home';
+import Signup from './pages/Signup';
 import Chat from './components/Chat/Chat';
 import Join from './components/Join/Join';
 
 import { Route, Switch } from 'react-router-dom';
-import Signup from './components/Join/Join';
 
 const App = () => {
   return (
