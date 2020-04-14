@@ -15,7 +15,6 @@ const App = () => {
       <Route path="/login" component={Login} />
       <Route path="/join" exact component={Join} />
       <Route path="/chat" component={Chat} />
-      {/* // add signup // add login */}
     </Switch>
   );
 };

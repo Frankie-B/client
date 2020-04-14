@@ -63,6 +63,7 @@ class Signup extends Component {
                   type="text"
                   placeholder="Enter First Name"
                   name="firstName"
+                  pattern="^[A-Za-z]+$"
                   required
                 />
                 <FormText className="text-muted">
@@ -77,6 +78,7 @@ class Signup extends Component {
                   type="text"
                   placeholder="Enter Last Name"
                   name="lastName"
+                  pattern="^[A-Za-z]+$"
                   required
                 />
                 <FormText className="text-muted">
@@ -91,6 +93,7 @@ class Signup extends Component {
                   type="email"
                   placeholder="Enter a username"
                   name="email"
+                  pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
                   required
                 />
                 <FormText className="text-muted">
@@ -105,10 +108,12 @@ class Signup extends Component {
                   type="text"
                   placeholder="Enter a username"
                   name="username"
+                  pattern="[A-Za-z0-9_]{1,15}"
                   required
                 />
                 <FormText className="text-muted">
                   Can only contain letters, numbers and underscores characters.
+                  Max 15.char
                 </FormText>
               </Form.Group>
 
@@ -119,6 +124,7 @@ class Signup extends Component {
                   type="password"
                   placeholder="Password"
                   name="password"
+                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
                   required
                 />
               </Form.Group>
