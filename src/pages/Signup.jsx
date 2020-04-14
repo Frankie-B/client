@@ -124,7 +124,7 @@ class Signup extends Component {
                   type="password"
                   placeholder="Password"
                   name="password"
-                  pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+                  pattern="[A-Za-z0-9_]$"
                   required
                 />
               </Form.Group>
