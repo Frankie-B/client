@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { Container } from 'react-bootstrap';
 import { Form } from 'react-bootstrap';
-import { FormGroup } from 'react-bootstrap';
-import { FormLabel } from 'react-bootstrap';
 import { FormControl } from 'react-bootstrap';
 import { Button } from 'react-bootstrap';
 import { FormText } from 'react-bootstrap';
@@ -58,9 +56,9 @@ class Signup extends Component {
           <h1 className="Signup-title">Sign up</h1>
           <div className="form-container">
             <Form>
-              <FormGroup controlId="formBasicEmail">
+              <Form.Group controlId="formBasicEmail">
                 <Form.Label>First Name</Form.Label>
-                <FormControl
+                <Form.Control
                   size="sm"
                   type="text"
                   placeholder="Enter First Name"
@@ -70,11 +68,11 @@ class Signup extends Component {
                 <FormText className="text-muted">
                   Can only contain alphabetic characters.
                 </FormText>
-              </FormGroup>
+              </Form.Group>
 
-              <FormGroup controlId="formBasicEmail">
+              <Form.Group controlId="formBasicEmail">
                 <Form.Label>Last Name</Form.Label>
-                <FormControl
+                <Form.Control
                   size="sm"
                   type="text"
                   placeholder="Enter Last Name"
@@ -84,11 +82,11 @@ class Signup extends Component {
                 <FormText className="text-muted">
                   Can only contain alphabetic characters.
                 </FormText>
-              </FormGroup>
+              </Form.Group>
 
-              <FormGroup controlId="formBasicEmail">
+              <Form.Group controlId="formBasicEmail">
                 <Form.Label>email</Form.Label>
-                <FormControl
+                <Form.Control
                   size="sm"
                   type="email"
                   placeholder="Enter a username"
@@ -98,9 +96,9 @@ class Signup extends Component {
                 <FormText className="text-muted">
                   Must be a valid email.
                 </FormText>
-              </FormGroup>
+              </Form.Group>
 
-              <FormGroup controlId="formBasicEmail">
+              <Form.Group controlId="formBasicEmail">
                 <Form.Label>Username</Form.Label>
                 <FormControl
                   size="sm"
@@ -112,18 +110,18 @@ class Signup extends Component {
                 <FormText className="text-muted">
                   Can only contain letters, numbers and underscores characters.
                 </FormText>
-              </FormGroup>
+              </Form.Group>
 
-              <FormGroup controlId="formBasicPassword">
-                <FormLabel>Password</FormLabel>
-                <FormControl
+              <Form.Group controlId="formBasicPassword">
+                <Form.Label>Password</Form.Label>
+                <Form.Control
                   size="sm"
                   type="password"
                   placeholder="Password"
                   name="password"
                   required
                 />
-              </FormGroup>
+              </Form.Group>
 
               <Button variant="primary" type="submit">
                 Submit
