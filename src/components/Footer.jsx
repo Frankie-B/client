@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
+import './Footer.scss';
 
 class Footer extends Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {};
-  }
-
   render() {
-    return <div></div>;
+    return (
+      <div className="Footer">
+        <small className="footer-text">
+          Created by Frankie &copy; 2020 | All Rights Reserved
+        </small>
+      </div>
+    );
   }
 }
 

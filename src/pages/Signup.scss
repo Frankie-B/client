@@ -8,14 +8,16 @@
     color: #ffffff;
   }
   .Signup-title {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
     font-size: 2.5rem;
     position: absolute;
     top: 15%;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
+    text-align: center;
     width: 80%;
-    width: 50%;
   }
 
   .signup-form {
@@ -29,7 +31,26 @@
 }
 
 @media (min-width: 992px) {
+  .Signup {
+    .Signup-title {
+      width: 30%;
+    }
+
+    .signup-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 30%;
+    }
+  }
+
   .form-group {
     width: 30vw;
+  }
+
+  .btn-desktop.btn.btn-primary {
+    margin-right: auto;
+    padding: 3%;
+    width: 10vw;
   }
 }
