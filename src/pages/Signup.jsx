@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './Signup.scss';
+import './Signup.scss';
 import { signup } from '../utils/auth';
 import Default from '../layouts/Default';
 
@@ -49,90 +49,90 @@ class Signup extends Component {
   render() {
     return (
       <Default>
-        <div className="Signup container">
-          <h1 className="Signup-title">Sign up</h1>
+        <div className="Signup">
           <div className="form-container">
+            <h1 className="Signup-title">Sign up</h1>
             <form className="signup-form">
               <div className="form-group">
-                <label for="exampleInputEmail1">First name</label>
+                <label>First name</label>
                 <input
                   onChange={this.handleInputChange}
                   value={this.state.firstName}
                   type="text"
-                  className="form-control form-control-sm"
+                  className="form-control"
                   placeholder="Enter First Name"
                   name="firstName"
                   pattern="^[A-Za-z]+$"
                   required
                 />
-                <small id="emailHelp" className="form-text text-muted">
+                {/* <small id="emailHelp" className="form-text text-muted">
                   Can only contain alphabetic characters.
-                </small>
+                </small> */}
               </div>
               <div className="form-group">
-                <label for="exampleInputEmail1">Last name</label>
+                <label>Last name</label>
                 <input
                   onChange={this.handleInputChange}
                   value={this.state.lastName}
-                  className="form-control form-control-sm"
+                  className="form-control"
                   type="text"
                   placeholder="Enter Last Name"
                   name="lastName"
                   pattern="^[A-Za-z]+$"
                   required
                 />
-                <small id="emailHelp" className="form-text text-muted">
+                {/* <small id="emailHelp" className="form-text text-muted">
                   Can only contain alphabetic characters.
-                </small>
+                </small> */}
               </div>
               <div className="form-group">
-                <label for="exampleInputEmail1">Email address</label>
+                <label>Email address</label>
                 <input
                   onChange={this.handleInputChange}
                   value={this.state.email}
-                  className="form-control form-control-sm"
+                  className="form-control"
                   type="email"
                   placeholder="you@address.com"
                   name="email"
                   pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
                   required
                 />
-                <small id="emailHelp" className="form-text text-muted">
+                {/* <small id="emailHelp" className="form-text text-muted">
                   We'll never share your email with anyone else.
-                </small>
+                </small> */}
               </div>
               <div className="form-group">
-                <label for="exampleInputEmail1">Username</label>
+                <label>Username</label>
                 <input
                   onChange={this.handleInputChange}
                   value={this.state.username}
-                  className="form-control form-control-sm"
+                  className="form-control"
                   type="text"
                   placeholder="Enter a username"
                   name="username"
                   pattern="[A-Za-z0-9_]{1,15}"
                   required
                 />
-                <small id="emailHelp" className="form-text text-muted">
+                {/* <small id="emailHelp" className="form-text text-muted">
                   Can only contain letters, numbers and underscores characters.
                   Max 15.char
-                </small>
+                </small> */}
               </div>
               <div className="form-group">
-                <label for="exampleInputPassword1">Password</label>
+                <label>Password</label>
                 <input
                   onChange={this.handleInputChange}
                   value={this.state.password}
-                  className="form-control form-control-sm"
+                  className="form-control"
                   type="password"
                   placeholder="Password"
                   name="password"
                   pattern="[A-Za-z0-9]+$"
                   required
                 />
-                <small id="emailHelp" className="form-text text-muted">
+                {/* <small id="emailHelp" className="form-text text-muted">
                   Can only contain letters and numbers. Min 5.char
-                </small>
+                </small> */}
               </div>
 
               <button type="submit" className="btn btn-primary">
