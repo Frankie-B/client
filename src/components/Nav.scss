@@ -33,6 +33,15 @@ nav {
   }
 }
 
+@media (min-width: 768px) {
+  .nav-img-brain-left {
+    left: 15%;
+  }
+  .nav-img-brain-right {
+    left: 10%;
+  }
+}
+
 @media (min-width: 992px) {
   .nav-img-brain-left {
     left: 9%;

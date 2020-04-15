@@ -34,7 +34,7 @@ class Login extends Component {
             error: null,
           },
           () => {
-            this.props.history.push('/user/profile');
+            this.props.history.push('/join');
           }
         );
       })
@@ -46,9 +46,9 @@ class Login extends Component {
   render() {
     return (
       <Default>
-        <div>
-          <div className="login-title">Welcome back! Please log in.</div>
-          <form>
+        <div className="Login">
+          <div className="login-title">Welcome back!.</div>
+          <form className="login-form">
             <div className="form-group">
               <label for="exampleInputEmail1">Username</label>
               <input
@@ -58,9 +58,6 @@ class Login extends Component {
                 className="form-control"
                 placeholder="Enter username"
               />
-              <small className="form-text text-muted">
-                We'll never share your email with anyone else.
-              </small>
             </div>
             <div className="form-group">
               <label for="exampleInputPassword1">Password</label>
@@ -70,7 +67,7 @@ class Login extends Component {
                 placeholder="Password"
               />
             </div>
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn-desktop btn btn-primary">
               Submit
             </button>
           </form>
