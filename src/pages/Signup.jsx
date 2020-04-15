@@ -22,6 +22,7 @@ class Signup extends Component {
   };
 
   handleInputChange(e) {
+    e.preventDefault();
     let userCopy = { ...this.state.user };
     userCopy[e.target.name] = e.target.value;
     this.setState({
@@ -29,7 +30,8 @@ class Signup extends Component {
     });
   }
 
-  handleSignupClick() {
+  handleSignupClick(e) {
+    e.preventDefault();
     signup(this.state.user)
       .then(() => {
         this.setState(
@@ -65,9 +67,6 @@ class Signup extends Component {
                   pattern="^[A-Za-z]+$"
                   required
                 />
-                {/* <small id="emailHelp" className="form-text text-muted">
-                  Can only contain alphabetic characters.
-                </small> */}
               </div>
               <div className="form-group">
                 <label>Last name</label>
@@ -81,9 +80,6 @@ class Signup extends Component {
                   pattern="^[A-Za-z]+$"
                   required
                 />
-                {/* <small id="emailHelp" className="form-text text-muted">
-                  Can only contain alphabetic characters.
-                </small> */}
               </div>
               <div className="form-group">
                 <label>Email address</label>
@@ -97,9 +93,6 @@ class Signup extends Component {
                   pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
                   required
                 />
-                {/* <small id="emailHelp" className="form-text text-muted">
-                  We'll never share your email with anyone else.
-                </small> */}
               </div>
               <div className="form-group">
                 <label>Username</label>
@@ -113,10 +106,6 @@ class Signup extends Component {
                   pattern="[A-Za-z0-9_]{1,15}"
                   required
                 />
-                {/* <small id="emailHelp" className="form-text text-muted">
-                  Can only contain letters, numbers and underscores characters.
-                  Max 15.char
-                </small> */}
               </div>
               <div className="form-group">
                 <label>Password</label>
@@ -130,9 +119,6 @@ class Signup extends Component {
                   // pattern="[A-Za-z0-9]+$"
                   required
                 />
-                {/* <small id="emailHelp" className="form-text text-muted">
-                  Can only contain letters and numbers. Min 5.char
-                </small> */}
               </div>
 
               <button type="submit" className="btn-desktop btn btn-primary">

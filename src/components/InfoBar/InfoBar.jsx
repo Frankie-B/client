@@ -13,7 +13,7 @@ const InfoBar = ({ room }) => (
       <h3>{room}</h3>
     </div>
     <div className="rightInnerContainer">
-      <a href="/">
+      <a href="/join">
         <img
           src="https://res.cloudinary.com/frankie-dev/image/upload/v1586768004/images/closeIcon.png"
           alt="close icon"
