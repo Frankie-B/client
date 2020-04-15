@@ -1,8 +1,15 @@
 .footer-text {
-  font-size: 0.95rem;
-  color: #ffffff;
-  position: fixed;
-  bottom: 0;
-  right: 40%;
-  margin-bottom: 2rem;
+  visibility: hidden;
+}
+
+@media (min-width: 992px) {
+  .footer-text {
+    visibility: visible;
+    font-size: 0.95rem;
+    color: #ffffff;
+    position: fixed;
+    bottom: 0;
+    right: 40%;
+    margin-bottom: 2rem;
+  }
 }
