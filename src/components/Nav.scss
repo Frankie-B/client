@@ -6,11 +6,38 @@ nav {
     width: 40%;
   }
 
+  .nav-img {
+    position: absolute;
+    height: 70px;
+    top: 55%;
+  }
+
+  .nav-img-brain-left {
+    right: 5%;
+  }
+  .nav-img-brain-right {
+    right: 13%;
+  }
+
+  .btn {
+    position: absolute;
+    top: 25%;
+    right: 2%;
+  }
+  .btn-primary {
+    right: 8%;
+  }
+
   .btn-light {
     margin-left: 1rem;
   }
 }
 
 @media (min-width: 992px) {
-  /**/
+  .nav-img-brain-left {
+    left: 9%;
+  }
+  .nav-img-brain-right {
+    left: 7%;
+  }
 }

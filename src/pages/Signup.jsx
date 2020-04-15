@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
-import { Container } from 'react-bootstrap';
-import { Form } from 'react-bootstrap';
-import { FormControl } from 'react-bootstrap';
-import { Button } from 'react-bootstrap';
-import { FormText } from 'react-bootstrap';
+// import './Signup.scss';
 import { signup } from '../utils/auth';
+import Default from '../layouts/Default';
 
 class Signup extends Component {
   constructor(props) {
@@ -51,94 +48,100 @@ class Signup extends Component {
 
   render() {
     return (
-      <div className="Signup">
-        <Container>
+      <Default>
+        <div className="Signup container">
           <h1 className="Signup-title">Sign up</h1>
           <div className="form-container">
-            <Form>
-              <Form.Group controlId="formBasicEmail">
-                <Form.Label>First Name</Form.Label>
-                <Form.Control
-                  size="sm"
+            <form className="signup-form">
+              <div className="form-group">
+                <label for="exampleInputEmail1">First name</label>
+                <input
+                  onChange={this.handleInputChange}
+                  value={this.state.firstName}
                   type="text"
+                  className="form-control form-control-sm"
                   placeholder="Enter First Name"
                   name="firstName"
                   pattern="^[A-Za-z]+$"
                   required
                 />
-                <FormText className="text-muted">
+                <small id="emailHelp" className="form-text text-muted">
                   Can only contain alphabetic characters.
-                </FormText>
-              </Form.Group>
-
-              <Form.Group controlId="formBasicEmail">
-                <Form.Label>Last Name</Form.Label>
-                <Form.Control
-                  size="sm"
+                </small>
+              </div>
+              <div className="form-group">
+                <label for="exampleInputEmail1">Last name</label>
+                <input
+                  onChange={this.handleInputChange}
+                  value={this.state.lastName}
+                  className="form-control form-control-sm"
                   type="text"
                   placeholder="Enter Last Name"
                   name="lastName"
                   pattern="^[A-Za-z]+$"
                   required
                 />
-                <FormText className="text-muted">
+                <small id="emailHelp" className="form-text text-muted">
                   Can only contain alphabetic characters.
-                </FormText>
-              </Form.Group>
-
-              <Form.Group controlId="formBasicEmail">
-                <Form.Label>email</Form.Label>
-                <Form.Control
-                  size="sm"
+                </small>
+              </div>
+              <div className="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                  onChange={this.handleInputChange}
+                  value={this.state.email}
+                  className="form-control form-control-sm"
                   type="email"
-                  placeholder="Enter a username"
+                  placeholder="you@address.com"
                   name="email"
                   pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
                   required
                 />
-                <FormText className="text-muted">
-                  Must be a valid email.
-                </FormText>
-              </Form.Group>
-
-              <Form.Group controlId="formBasicEmail">
-                <Form.Label>Username</Form.Label>
-                <FormControl
-                  size="sm"
+                <small id="emailHelp" className="form-text text-muted">
+                  We'll never share your email with anyone else.
+                </small>
+              </div>
+              <div className="form-group">
+                <label for="exampleInputEmail1">Username</label>
+                <input
+                  onChange={this.handleInputChange}
+                  value={this.state.username}
+                  className="form-control form-control-sm"
                   type="text"
                   placeholder="Enter a username"
                   name="username"
                   pattern="[A-Za-z0-9_]{1,15}"
                   required
                 />
-                <FormText className="text-muted">
+                <small id="emailHelp" className="form-text text-muted">
                   Can only contain letters, numbers and underscores characters.
                   Max 15.char
-                </FormText>
-              </Form.Group>
-
-              <Form.Group controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
-                <Form.Control
-                  size="sm"
+                </small>
+              </div>
+              <div className="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input
+                  onChange={this.handleInputChange}
+                  value={this.state.password}
+                  className="form-control form-control-sm"
                   type="password"
                   placeholder="Password"
                   name="password"
                   pattern="[A-Za-z0-9]+$"
                   required
                 />
-                <FormText className="text-muted">
+                <small id="emailHelp" className="form-text text-muted">
                   Can only contain letters and numbers. Min 5.char
-                </FormText>
-              </Form.Group>
+                </small>
+              </div>
 
-              <Button variant="primary" type="submit">
+              <button type="submit" className="btn btn-primary">
                 Submit
-              </Button>
-            </Form>
+              </button>
+            </form>
           </div>
-        </Container>
-      </div>
+        </div>
+      </Default>
     );
   }
 }

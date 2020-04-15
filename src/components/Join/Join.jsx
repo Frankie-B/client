@@ -16,7 +16,7 @@ export default function SignIn() {
             placeholder="Name"
             className="joinInput"
             type="text"
-            hidden
+            // hidden
             onChange={(event) => setName(event.target.value)}
           />
         </div>

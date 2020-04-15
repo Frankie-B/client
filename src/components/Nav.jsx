@@ -1,28 +1,36 @@
 import React, { Component } from 'react';
 import './Nav.scss';
+import { Link } from 'react-router-dom';
 
 class Nav extends Component {
   render() {
     return (
-      <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-end">
-        <a class="navbar-brand" href="#">
-          Navbar
-        </a>
+      <nav className="navbar navbar-expand-lg navbar-light d-flex justify-content-end">
+        <Link to="/" className="navbar-brand" href="/">
+          <img
+            src="https://res.cloudinary.com/frankie-dev/image/upload/v1586406741/images/leftBrain.svg"
+            alt=""
+            className="nav-img nav-img-brain-left"
+          />
+          <img
+            src="https://res.cloudinary.com/frankie-dev/image/upload/v1586406741/images/rightBrain.svg"
+            alt=""
+            className="nav-img nav-img-brain-right"
+          />
+        </Link>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <form class="form-inline my-2 my-lg-0">
-            <button
-              class="btn btn-primary my-2 my-sm-0 d-none d-lg-block"
-              type="submit"
-            >
-              Sign Up
-            </button>
-            <button
-              class="btn btn-light my-2 my-sm-0 d-none d-lg-block"
-              type="submit"
-            >
-              Log In
-            </button>
+        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+          <form className="form-inline my-2 my-lg-0">
+            <Link to="/signup">
+              <button className="btn btn-primary my-2 my-sm-0 d-none d-lg-block">
+                Sign Up
+              </button>
+            </Link>
+            <Link to="/login">
+              <button className="btn btn-light my-2 my-sm-0 d-none d-lg-block">
+                Log In
+              </button>
+            </Link>
           </form>
         </div>
       </nav>
