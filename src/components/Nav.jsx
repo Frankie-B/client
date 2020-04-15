@@ -12,13 +12,13 @@ class Nav extends Component {
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <form class="form-inline my-2 my-lg-0">
             <button
-              class="btn btn-primary my-2 my-sm-0 d-none d-md-block"
+              class="btn btn-primary my-2 my-sm-0 d-none d-lg-block"
               type="submit"
             >
               Sign Up
             </button>
             <button
-              class="btn btn-light my-2 my-sm-0 d-none d-md-block"
+              class="btn btn-light my-2 my-sm-0 d-none d-lg-block"
               type="submit"
             >
               Log In

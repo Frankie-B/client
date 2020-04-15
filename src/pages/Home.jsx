@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Home.scss';
 import Default from '../layouts/Default';
+import { Link } from 'react-router-dom';
 
 class Home extends Component {
   render() {
@@ -19,6 +20,16 @@ class Home extends Component {
               alt=""
               className="home-img brain-right"
             />
+          </div>
+          <div className="home-mobile-btns">
+            <Link to="/signup">
+              <button className="btn btn-primary btn-md d-lg-none">
+                Sign Up
+              </button>
+            </Link>
+            <Link to="/login">
+              <button className="btn btn-light btn-md d-lg-none">Log In</button>
+            </Link>
           </div>
         </div>
       </Default>
