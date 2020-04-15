@@ -1,0 +1,47 @@
+Home {
+  height: 100vh;
+}
+
+.home-img-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.home-img {
+  height: 15rem;
+}
+
+.brain-left {
+  position: fixed;
+  left: 0;
+  top: 25%;
+}
+
+.brain-right {
+  position: fixed;
+  right: 0;
+  top: 25%;
+}
+
+.home-title {
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 700;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@media (min-width: 992px) {
+  .home-title {
+    top: 25%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+}
