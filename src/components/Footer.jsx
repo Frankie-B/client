@@ -5,7 +5,7 @@ class Footer extends Component {
   render() {
     return (
       <div className="Footer">
-        <small className="footer-text">
+        <small id="footer-info" className="footer-text">
           Created by Frankie &copy; 2020 | All Rights Reserved
         </small>
       </div>
