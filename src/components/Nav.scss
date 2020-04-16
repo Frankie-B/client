@@ -15,7 +15,7 @@ nav {
   .nav-img {
     position: absolute;
     height: 70px;
-    top: 55%;
+    top: 50%;
   }
 
   .nav-img-brain-left {
@@ -23,10 +23,6 @@ nav {
   }
   .nav-img-brain-right {
     right: 14%;
-  }
-
-  button.btn-lg {
-    width: 30%;
   }
 
   .btn {
@@ -55,11 +51,6 @@ nav {
 
 @media (min-width: 992px) {
   nav {
-    button.btn-lg {
-      height: 3rem;
-      width: 7%;
-    }
-
     .btn {
       top: 45%;
     }

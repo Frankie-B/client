@@ -13,7 +13,7 @@
     border-bottom: 2px solid #ffffff;
     font-size: 2.5rem;
     position: absolute;
-    top: 11%;
+    top: 10%;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -34,6 +34,7 @@
 @media (min-width: 992px) {
   .Signup {
     .Signup-title {
+      top: 9%;
       width: 30%;
     }
 
@@ -52,6 +53,6 @@
 
   .btn.btn-primary {
     margin-right: auto;
-    width: 11vw;
+    width: 10vw;
   }
 }
