@@ -107,12 +107,11 @@ class Signup extends Component {
                   type="password"
                   placeholder="Password"
                   name="password"
-                  // pattern="[A-Za-z0-9]+$"
                   required
                 />
               </div>
 
-              <button type="submit" className="btn-desktop btn btn-primary">
+              <button type="submit" className="btn btn-primary btn-lg">
                 Submit
               </button>
             </form>

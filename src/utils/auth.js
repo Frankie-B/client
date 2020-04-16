@@ -30,8 +30,3 @@ export const setUser = (user) => {
 export const getUser = (user) => {
   return JSON.parse(window.localStorage.getItem('user'));
 };
-
-//export const logout = () => {
-// using axios logout on the back-end
-// clear localstorage after you got a confirmation fro
-//};
