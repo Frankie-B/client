@@ -1,7 +1,7 @@
 import Axios from 'axios';
 import qs from 'qs';
 const axios = Axios.create({
-  baseURL: 'http://localhost:3005/', // add http in front
+  baseURL: process.env.REACT_APP_WEB_PORT,
   withCredentials: false,
   headers: { 'content-type': 'application/x-www-form-urlencoded' },
 });
@@ -30,3 +30,8 @@ export const setUser = (user) => {
 export const getUser = (user) => {
   return JSON.parse(window.localStorage.getItem('user'));
 };
+
+//export const logout = () => {
+// using axios logout on the back-end
+// clear localstorage after you got a confirmation fro
+//};
