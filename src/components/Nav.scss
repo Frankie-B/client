@@ -6,6 +6,12 @@ nav {
     width: 40%;
   }
 
+  .navbar-brand {
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+  }
+
   .nav-img {
     position: absolute;
     height: 70px;
@@ -13,10 +19,14 @@ nav {
   }
 
   .nav-img-brain-left {
-    right: 5%;
+    right: 4%;
   }
   .nav-img-brain-right {
-    right: 13%;
+    right: 14%;
+  }
+
+  button.btn-lg {
+    width: 30%;
   }
 
   .btn {
@@ -48,6 +58,10 @@ nav {
     button.btn-lg {
       height: 3rem;
       width: 7%;
+    }
+
+    .btn {
+      top: 45%;
     }
 
     .btn-primary {

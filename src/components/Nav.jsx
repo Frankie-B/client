@@ -6,7 +6,7 @@ class Nav extends Component {
   render() {
     return (
       <nav className="navbar navbar-expand-lg navbar-light d-flex justify-content-end">
-        <Link to="/" className="navbar-brand" href="/">
+        <Link to="/" className="navbar-brand">
           <img
             src="https://res.cloudinary.com/frankie-dev/image/upload/v1586406741/images/leftBrain.svg"
             alt=""

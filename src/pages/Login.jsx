@@ -47,10 +47,10 @@ class Login extends Component {
     return (
       <Default>
         <div className="Login">
-          <div className="login-title">Welcome back!.</div>
+          <div className="login-title">Welcome back!</div>
           <form className="login-form">
             <div className="form-group">
-              <label for="exampleInputEmail1">Username</label>
+              <label>Username</label>
               <input
                 onChange={this.handleInputChange}
                 value={this.state.username}
@@ -60,7 +60,7 @@ class Login extends Component {
               />
             </div>
             <div className="form-group">
-              <label for="exampleInputPassword1">Password</label>
+              <label>Password</label>
               <input
                 type="password"
                 className="form-control"

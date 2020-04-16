@@ -9,22 +9,23 @@
   label {
     color: #ffffff;
   }
+
   .login-title {
     color: #ffffff;
     border-bottom: 2px solid #ffffff;
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     position: absolute;
-    top: 15%;
+    top: 25%;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
     text-align: center;
-    width: 40%;
+    width: 50%;
   }
 
   .login-form {
     position: absolute;
-    top: 30%;
+    top: 40%;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
@@ -37,6 +38,11 @@
     display: flex;
     .login-title {
       width: 25%;
+    }
+
+    .login-title {
+      font-size: 2.5rem;
+      top: 25%;
     }
 
     .login-form {
@@ -53,7 +59,7 @@
 
   .btn-desktop.btn.btn-primary {
     margin-right: auto;
-    padding: 1%;
+    padding: 5%;
     width: 10vw;
   }
 }

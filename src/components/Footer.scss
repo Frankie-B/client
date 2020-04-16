@@ -1,5 +1,8 @@
 .footer-text {
-  visibility: hidden;
+  color: #ffffff;
+  position: fixed;
+  bottom: 2%;
+  left: 13%;
 }
 
 @media (min-width: 768px) {
@@ -21,7 +24,8 @@
     color: #ffffff;
     position: fixed;
     bottom: 0;
-    right: 40%;
+    right: 15%;
     margin-bottom: 2rem;
+    text-align: center;
   }
 }
