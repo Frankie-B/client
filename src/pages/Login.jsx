@@ -7,27 +7,26 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleSignupClick = this.handleSignupClick.bind(this);
+    this.handleLoginClick = this.handleLoginClick.bind(this);
   }
 
   state = {
-    user: {
-      username: '',
-      password: '',
-    },
-    error: null,
+    username: '',
+    password: '',
   };
 
-  handleInputChange(e) {
-    let userCopy = { ...this.state.user };
-    userCopy[e.target.name] = e.target.value;
+  handleInputChange(event) {
+    event.preventDefault();
+    let name = event.target.name;
+    let value = event.target.value;
     this.setState({
-      user: userCopy,
+      [name]: value,
     });
   }
 
-  handleSignupClick() {
-    login(this.state.user)
+  handleLoginClick(event) {
+    event.preventDefault();
+    login(this.state)
       .then(() => {
         this.setState(
           {
@@ -48,13 +47,14 @@ class Login extends Component {
       <Default>
         <div className="Login">
           <div className="login-title">Welcome back!</div>
-          <form className="login-form">
+          <form onSubmit={this.handleLoginClick} className="login-form">
             <div className="form-group">
               <label>Username</label>
               <input
                 onChange={this.handleInputChange}
                 value={this.state.username}
                 type="text"
+                name="username"
                 className="form-control"
                 placeholder="Enter username"
               />
@@ -62,7 +62,9 @@ class Login extends Component {
             <div className="form-group">
               <label>Password</label>
               <input
+                onChange={this.handleInputChange}
                 type="password"
+                name="password"
                 className="form-control"
                 placeholder="Password"
               />
