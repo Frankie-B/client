@@ -11,22 +11,19 @@ class Signup extends Component {
   }
 
   state = {
-    user: {
-      firstName: '',
-      lastName: '',
-      username: '',
-      email: '',
-      password: '',
-    },
-    error: null,
+    firstName: '',
+    lastName: '',
+    username: '',
+    email: '',
+    password: '',
   };
 
-  handleInputChange(e) {
-    e.preventDefault();
-    let userCopy = { ...this.state.user };
-    userCopy[e.target.name] = e.target.value;
+  handleInputChange(event) {
+    event.preventDefault();
+    let name = event.target.name;
+    let value = event.target.value;
     this.setState({
-      user: userCopy,
+      [name]: value,
     });
   }
 
@@ -34,15 +31,9 @@ class Signup extends Component {
     e.preventDefault();
     signup(this.state)
       .then(() => {
-        this.setState(
-          {
-            error: null,
-          },
-          () => {
-            this.props.history.push('/login');
-          }
-        );
+        this.props.history.push('/login');
       })
+
       .catch((error) => {
         this.setState({ error: error.response && error.response.data });
       });
@@ -54,7 +45,7 @@ class Signup extends Component {
         <div className="Signup">
           <div className="form-container">
             <h1 className="Signup-title">Sign up</h1>
-            <form onSubmit={this.handleSubmit} className="signup-form">
+            <form onSubmit={this.handleSignupClick} className="signup-form">
               <div className="form-group">
                 <label>First name</label>
                 <input
