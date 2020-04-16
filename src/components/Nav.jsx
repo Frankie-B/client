@@ -19,15 +19,18 @@ class Nav extends Component {
           />
         </Link>
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <form className="form-inline my-2 my-lg-0">
+        <div
+          className="nav-btn-container collapse navbar-collapse"
+          id="navbarSupportedContent"
+        >
+          <form className="btn-container form-inline my-2 my-lg-0">
             <Link to="/signup">
-              <button className="btn btn-primary my-2 my-sm-0 d-none d-lg-block">
+              <button className="btn btn-primary btn-lg my-2 my-sm-0 d-none d-lg-block">
                 Sign Up
               </button>
             </Link>
             <Link to="/login">
-              <button className="btn btn-light my-2 my-sm-0 d-none d-lg-block">
+              <button className="btn btn-light btn-lg my-2 my-sm-0 d-none d-lg-block">
                 Log In
               </button>
             </Link>

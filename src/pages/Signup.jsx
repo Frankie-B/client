@@ -32,14 +32,14 @@ class Signup extends Component {
 
   handleSignupClick(e) {
     e.preventDefault();
-    signup(this.state.user)
+    signup(this.state)
       .then(() => {
         this.setState(
           {
             error: null,
           },
           () => {
-            this.props.history.push('/user/profile');
+            this.props.history.push('/login');
           }
         );
       })
@@ -54,7 +54,7 @@ class Signup extends Component {
         <div className="Signup">
           <div className="form-container">
             <h1 className="Signup-title">Sign up</h1>
-            <form className="signup-form">
+            <form onSubmit={this.handleSubmit} className="signup-form">
               <div className="form-group">
                 <label>First name</label>
                 <input

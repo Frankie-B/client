@@ -23,6 +23,7 @@ nav {
     position: absolute;
     top: 25%;
     right: 2%;
+    z-index: 5;
   }
   .btn-primary {
     right: 8%;
@@ -43,6 +44,16 @@ nav {
 }
 
 @media (min-width: 992px) {
+  nav {
+    button.btn-lg {
+      height: 3rem;
+      width: 7%;
+    }
+
+    .btn-primary {
+      right: 10%;
+    }
+  }
   .nav-img-brain-left {
     left: 9%;
   }
