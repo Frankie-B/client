@@ -1,16 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-
+import Logout from '../Logout';
 import './Join.css';
 
-export default function SignIn() {
+export default function Join(props) {
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
   return (
     <div className="joinOuterContainer">
-      <Link to="/">
-        <button className="joinButton btn btn-light btn-lg">Log out</button>
-      </Link>
+      <Logout {...props} />
       <div className="joinInnerContainer">
         <h1 className="heading">Join a room</h1>
         <div>

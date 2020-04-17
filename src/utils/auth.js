@@ -24,9 +24,19 @@ export const login = (user) => {
   });
 };
 
+export const logout = (user) => {
+  return axios.delete('logout').then((response) => {
+    clearUser('user');
+  });
+};
+
 export const setUser = (user) => {
   window.localStorage.setItem('user', JSON.stringify(user));
 };
 export const getUser = (user) => {
   return JSON.parse(window.localStorage.getItem('user'));
+};
+
+export const clearUser = (user) => {
+  window.localStorage.clear('user');
 };
