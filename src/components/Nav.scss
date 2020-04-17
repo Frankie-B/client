@@ -8,8 +8,14 @@ nav {
 
   .navbar-brand {
     position: absolute;
+    height: 100%;
     width: 100%;
+    padding: 0 auto;
     z-index: 5;
+  }
+
+  .nav-logo {
+    width: 100%;
   }
 
   .nav-img {
@@ -19,10 +25,10 @@ nav {
   }
 
   .nav-img-brain-left {
-    right: 4%;
+    right: 3%;
   }
   .nav-img-brain-right {
-    right: 14%;
+    right: 13%;
   }
 
   .btn {
@@ -54,15 +60,16 @@ nav {
     .btn {
       top: 45%;
     }
-
-    .btn-primary {
-      right: 10%;
-    }
   }
+
+  .btn-primary {
+    right: 10%;
+  }
+
   .nav-img-brain-left {
     left: 9.5%;
   }
   .nav-img-brain-right {
-    left: 7%;
+    left: 7.5%;
   }
 }

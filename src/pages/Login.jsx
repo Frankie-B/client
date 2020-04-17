@@ -57,6 +57,7 @@ class Login extends Component {
                 name="username"
                 className="form-control"
                 placeholder="Enter username"
+                required
               />
             </div>
             <div className="form-group">
@@ -67,6 +68,7 @@ class Login extends Component {
                 name="password"
                 className="form-control"
                 placeholder="Password"
+                required
               />
             </div>
             <button type="submit" className="btn-desktop btn btn-primary">
