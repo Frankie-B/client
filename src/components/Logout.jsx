@@ -13,7 +13,6 @@ class Logout extends Component {
     //After the promise is resolved the clearUser function gets called (which clears the localStorage)
     logout()
       .then((response) => {
-        debugger;
         this.props.history.push('/');
       })
       .catch((error) => {
