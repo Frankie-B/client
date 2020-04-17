@@ -8,6 +8,9 @@ export default function SignIn() {
   const [room, setRoom] = useState('');
   return (
     <div className="joinOuterContainer">
+      <Link to="/">
+        <button className="joinButton btn btn-light btn-lg">Log out</button>
+      </Link>
       <div className="joinInnerContainer">
         <h1 className="heading">Join a room</h1>
         <div>

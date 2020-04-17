@@ -22,6 +22,12 @@ body {
   background-color: #1a1a1d;
 }
 
+.joinButton {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+}
+
 .joinInnerContainer {
   width: 20%;
 }
