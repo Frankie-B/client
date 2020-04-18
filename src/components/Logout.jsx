@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { logout } from '../utils/auth';
-import { Link } from 'react-router-dom';
 
 class Logout extends Component {
   constructor(props) {
@@ -9,8 +8,6 @@ class Logout extends Component {
   }
 
   handleLogout() {
-    // This function sends a message to the backend to tell it to destroy the session.
-    //After the promise is resolved the clearUser function gets called (which clears the localStorage)
     logout()
       .then((response) => {
         this.props.history.push('/');
