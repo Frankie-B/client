@@ -58,13 +58,13 @@ Home {
   margin-left: 1rem;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 576px) {
   .home-mobile-btns {
     left: 38%;
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 992px) {
   .home-title {
     top: 25%;
     left: 50%;
