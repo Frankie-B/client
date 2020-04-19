@@ -22,12 +22,12 @@ class Home extends Component {
             />
           </div>
           <div className="home-mobile-btns">
-            <Link to="/signup">
+            <Link to="/signup" className="btn-left">
               <button className="btn btn-primary btn-md d-lg-none">
                 Sign Up
               </button>
             </Link>
-            <Link to="/login">
+            <Link to="/login" className="btn-right">
               <button className="btn btn-light btn-md d-lg-none">Log In</button>
             </Link>
           </div>

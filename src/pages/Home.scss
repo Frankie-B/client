@@ -58,17 +58,21 @@ Home {
   margin-left: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .home-mobile-btns {
     left: 38%;
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1200px) {
   .home-title {
     top: 25%;
     left: 50%;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
+  }
+
+  .btn-right {
+    margin-left: 5rem;
   }
 }

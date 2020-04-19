@@ -3,31 +3,39 @@
   position: fixed;
   bottom: 0;
   left: 13%;
+  width: 90%;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 576px) {
+  Footer {
+    width: 50%;
+  }
+
   .footer-text {
-    visibility: visible;
     font-size: 0.95rem;
     color: #ffffff;
     position: fixed;
     bottom: 0;
-    right: 25%;
-    margin-bottom: 2rem;
+    left: 25%;
+    width: 50%;
   }
 }
 
 @media (min-width: 992px) {
+  .Footer {
+    text-align: center;
+    width: 50vw;
+  }
+
   #footer-info {
     margin: 0;
   }
+
   .footer-text {
-    color: red;
-    visibility: visible;
     font-size: 0.95rem;
     color: #ffffff;
     bottom: 0;
-    right: 15%;
+    left: 26%;
     text-align: center;
   }
 }
