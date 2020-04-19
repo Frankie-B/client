@@ -1,1 +1,5 @@
+/login/*  https://mentally-me-server.herokuapp.com/:splat  200
+
+/signup/*  https://mentally-me-server.herokuapp.com/:splat  200
+
 /*    /index.html   200
