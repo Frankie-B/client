@@ -20,7 +20,7 @@ class Nav extends Component {
         </Link>
 
         <div className="nav-btn-container collapse navbar-collapse">
-          <Link to="/login">
+          <Link to="/signup">
             <button className="btn btn-primary my-2 my-sm-0 d-none d-lg-block ">
               Sign Up
             </button>
