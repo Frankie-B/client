@@ -17,12 +17,14 @@ Home {
   position: fixed;
   left: 0;
   top: 25%;
+  z-index: 99;
 }
 
 .brain-right {
   position: fixed;
   right: 0;
   top: 25%;
+  z-index: 99;
 }
 
 .home-title {
@@ -35,6 +37,7 @@ Home {
   left: 50%;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+  z-index: 50;
 }
 
 .home-mobile-btns {
