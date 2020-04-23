@@ -1,9 +1,11 @@
 import Axios from 'axios';
 import qs from 'qs';
+
 const axios = Axios.create({
   baseURL: process.env.REACT_APP_WEB_PORT,
-  withCredentials: true
+  withCredentials: true,
 });
+
 export const signup = (user) => {
   return axios({
     method: 'POST',
@@ -13,6 +15,7 @@ export const signup = (user) => {
     setUser(response.data);
   });
 };
+
 export const login = (user) => {
   return axios({
     method: 'POST',
