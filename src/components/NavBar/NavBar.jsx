@@ -6,7 +6,7 @@ import SideBarToggle from '../SideBar/SideBarToggle';
 const NavBar = (props) => {
   return (
     <header className="NavBar">
-      <nav class="NavBar-nav">
+      <nav className="NavBar-nav">
         <div className="hamburger-icon">
           <SideBarToggle click={props.toggleClickHandler} />
         </div>

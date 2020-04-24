@@ -1,34 +1,42 @@
 Mentally.me
-<br>Client part.
+<br>Client side
 <br><b>Screenshots from the app below.</b>
 
-The third and the final project during Ironhack bootcamp. A compassion driven social chat app.
+The final project during Ironhack boot camp. A compassion driven social chat app.
 
-<br><br><b>This Application was showcasd in the hackshow</b> - the contest for the best application from Web Dev Ironhack Bootcamps (full time and part time).
+I feel that in a seemingly connected world, I feel that a lot the platforms our there are popularity driven and as a result,
+end up having the opposite effect. Mentally me is a chat app with a focus on compassion and support. Because sometimes it is
+easier to talk to a stranger.
+
+<br><br><b>This Application was one of two showcased in the IronHack Hack show for the Web Development Cohort</b>
 
 Stack:
 
-- MongoDB
+- HTML
+
+- CSS
 
 - Express
 
-- React
+- ReactJS
 
-- Redux
+- Socket.io
 
 - NodeJS
 
-- Bulma
+- MongoDB
+
+- Axios
 
 You can check the application here:
 
-https://pet-sitter-app.netlify.com/
+https://mentally-me-chat-v1.netlify.app/
 
-Login: test@test.com | password: qwaszx12
+Login: Test | password: Test123
 
-Created by: Monika Swidzinska and Dominik Antunovic - two students of Ironhack Bootcamp in Amsterdam.
+Created by: Francis Kasozi Bukenya - Full Stack IronHack graduate.
 
-Created: 04.02.2020
+Created: 17.04.2020
 
 <hr>
 Screenshots form the application (including allerts, after providing wrong data):
