@@ -31,8 +31,8 @@ Screenshots form the application (including views from both desktop and mobile r
 <img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/homepage.png" />
 </div>
 <hr>
-<div style="display: flex; justify-content: center; height: 350px;">
-<img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/HomeMobile.jpg" />
+<div style="display: flex; justify-content: center;">
+<img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/HomeMobile.jpg" height="height: 350px;" />
 </div>
 <hr>
 <h2>Join Room</h2>
@@ -40,8 +40,8 @@ Screenshots form the application (including views from both desktop and mobile r
 <img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/joinpage.png" />
 </div>
 <hr>
-<div style="display: flex; justify-content: center; height: 350px;">
-<img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/joinMobile.jpg" />
+<div style="display: flex; justify-content: center;">
+<img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/joinMobile.jpg" height="height: 350px;" />
 </div>
 <hr>
 <h2>Chat Room</h2>
@@ -49,8 +49,8 @@ Screenshots form the application (including views from both desktop and mobile r
 <img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/chatroom.png" />
 </div>
 <hr>
-<div style="display: flex; justify-content: center; height: 350px;">
-<img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/chatroomMobile.jpg" />
+<div style="display: flex; justify-content: center;">
+<img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/chatroomMobile.jpg" height="height: 350px;" />
 </div>
 <hr>
 <h2>Messages</h2>
@@ -58,6 +58,6 @@ Screenshots form the application (including views from both desktop and mobile r
 <img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/messagesDesktop.png" />
 </div>
 <hr>
-<div style="display: flex; justify-content: center; height: 350px;">
-<img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587916000/mentally-me-screenshots/messagesMobile.jpg" />
+<div style="display: flex; justify-content: center;">
+<img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587916000/mentally-me-screenshots/messagesMobile.jpg" height="height: 350px;" />
 </div>
