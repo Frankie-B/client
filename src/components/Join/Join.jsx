@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { logout } from '../../utils/auth';
-// import { login } from '../../utils/auth';
+import { getUser, logout } from '../../utils/auth';
 import './Join.css';
 
 export default function Join(props) {
-  const [name, setName] = useState('');
+  // const [name, setName] = useState('');
   const [room, setRoom] = useState('');
+  let user = getUser();
 
   const handleLogout = (props) => {
     logout()
@@ -20,6 +20,7 @@ export default function Join(props) {
 
   return (
     <div className="joinOuterContainer">
+      <h1 className="join-welcome">Welcome back {user.username}</h1>
       <div className="joinInnerContainer">
         <h1 className="heading">Join a room</h1>
         <div>
@@ -27,7 +28,8 @@ export default function Join(props) {
             placeholder="Name"
             className="joinInput"
             type="text"
-            onChange={(event) => setName(event.target.value)}
+            readOnly={user.username}
+            hidden
           />
         </div>
         <div>
@@ -39,8 +41,8 @@ export default function Join(props) {
           />
         </div>
         <Link
-          onClick={(e) => (!name || !room ? e.preventDefault() : null)}
-          to={`/chat?name=${name}&room=${room}`}
+          onClick={(e) => (!user.username || !room ? e.preventDefault() : null)}
+          to={`/chat?name=${user.username}&room=${room}`}
         >
           <button className={'button mt-20'} type="submit">
             Join A Room

@@ -38,9 +38,18 @@ body {
   width: 100%;
 }
 
+.join-welcome {
+  font-size: 2rem;
+  color: #ffffff;
+  position: fixed;
+  top: 10%;
+  left: 25%;
+  width: 50%;
+}
+
 .heading {
   color: white;
-  font-size: 2.5em;
+  font-size: 2rem;
   padding-bottom: 10px;
   border-bottom: 2px solid white;
 }
@@ -80,6 +89,10 @@ body {
 
   .joinInnerContainer {
     width: 90%;
+  }
+
+  .join-welcome {
+    top: 2%;
   }
 }
 

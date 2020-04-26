@@ -7,9 +7,9 @@ import SideBar from '../components/SideBar/SideBar';
 import Backdrop from '../components/Backdrop/Backdrop';
 
 class Default extends Component {
-  constructor(props) {
-    super(props);
-  }
+  // constructor(props) {
+  //   super(props);
+  // }
 
   state = {
     sideBarOpen: false,
