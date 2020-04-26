@@ -31,7 +31,7 @@ Screenshots form the application (including views from both desktop and mobile r
 <img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/homepage.png" />
 </div>
 <hr>
-<div style="display: flex; justify-content: center; height: 60%;">
+<div style="display: flex; justify-content: center; height: 350px;">
 <img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/HomeMobile.jpg" />
 </div>
 <hr>
@@ -40,7 +40,7 @@ Screenshots form the application (including views from both desktop and mobile r
 <img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/joinpage.png" />
 </div>
 <hr>
-<div style="display: flex; justify-content: center; height: 60%;">
+<div style="display: flex; justify-content: center; height: 350px;">
 <img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/joinMobile.jpg" />
 </div>
 <hr>
@@ -49,7 +49,7 @@ Screenshots form the application (including views from both desktop and mobile r
 <img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/chatroom.png" />
 </div>
 <hr>
-<div style="display: flex; justify-content: center; height: 60%;">
+<div style="display: flex; justify-content: center; height: 350px;">
 <img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/chatroomMobile.jpg" />
 </div>
 <hr>
@@ -58,6 +58,6 @@ Screenshots form the application (including views from both desktop and mobile r
 <img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/messagesDesktop.png" />
 </div>
 <hr>
-<div style="display: flex; justify-content: center; height: 60%;">
+<div style="display: flex; justify-content: center; height: 350px;">
 <img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587916000/mentally-me-screenshots/messagesMobile.jpg" />
 </div>
