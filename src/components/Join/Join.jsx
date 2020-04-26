@@ -1,14 +1,25 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import Logout from '../Logout';
+import { logout } from '../../utils/auth';
+// import { login } from '../../utils/auth';
 import './Join.css';
 
 export default function Join(props) {
   const [name, setName] = useState('');
   const [room, setRoom] = useState('');
+
+  const handleLogout = (props) => {
+    logout()
+      .then((response) => {
+        props.history.push('/');
+      })
+      .catch((error) => {
+        console.log('logout error', error);
+      });
+  };
+
   return (
     <div className="joinOuterContainer">
-      <Logout {...props} />
       <div className="joinInnerContainer">
         <h1 className="heading">Join a room</h1>
         <div>
@@ -33,6 +44,11 @@ export default function Join(props) {
         >
           <button className={'button mt-20'} type="submit">
             Join A Room
+          </button>
+        </Link>
+        <Link onClick={handleLogout} to="/">
+          <button className={'button logout mt-20'} type="submit">
+            Log out
           </button>
         </Link>
       </div>

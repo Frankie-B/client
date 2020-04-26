@@ -1,6 +1,6 @@
 html,
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   padding: 0;
   margin: 0;
 }
@@ -55,6 +55,18 @@ body {
   display: inline-block;
   border: none;
   width: 100%;
+}
+.button:hover {
+  background: #2962ff;
+}
+
+.button.logout {
+  background: #505050;
+  color: #ffffff;
+}
+
+.button.logout:hover {
+  background: #808080;
 }
 
 .mt-20 {

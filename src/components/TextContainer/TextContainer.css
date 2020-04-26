@@ -4,7 +4,7 @@
   margin-left: 50px;
   color: white;
   height: 65%;
-  justify-content: space-around;
+  justify-content: flex-start;
   padding-right: 5%;
   width: 30%;
 }
@@ -17,13 +17,12 @@
   width: 85%;
 }
 
-.text-container-subheading {
-  font-size: 1.5rem;
-  margin-top: 1rem;
-}
-
 .text-container-tagline {
   width: 85%;
+}
+
+.text-container-users {
+  color: #ffffff;
 }
 
 .activeContainer {
