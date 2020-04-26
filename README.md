@@ -1,6 +1,6 @@
 Mentally.me
 <br>Client side
-<br><b>Screenshots from the app below.</b>
+<br><b>Screenshots from the app are included below.</b>
 
 The final project during Ironhack boot camp. A compassion driven social chat app.
 
@@ -10,66 +10,54 @@ easier to talk to a stranger.
 
 <br><br><b>This Application was one of two showcased in the IronHack Hack show for the Web Development Cohort</b>
 
-Stack:
+Tech Stack: HTML | SCSS | Javascript(ES6) | Express | ReactJS | Socket.io | NodeJS | MongoDB | Axios
 
-- HTML
-
-- CSS
-
-- Express
-
-- ReactJS
-
-- Socket.io
-
-- NodeJS
-
-- MongoDB
-
-- Axios
-
-You can check the application here:
+You can check the live application here:
 
 https://mentally-me-chat-v1.netlify.app/
 
-Login: Test | password: Test123
+Guest Account- Username: Test | password: Test123
 
-Created by: Francis Kasozi Bukenya - Full Stack IronHack graduate.
+Created by: Francis Kasozi Bukenya - A Full Stack Web Development IronHack graduate.
 
 Created: 17.04.2020
 
 <hr>
-Screenshots form the application (including allerts, after providing wrong data):
+Screenshots form the application (including views from both desktop and mobile renders):
 <br>
 <br>
+<h2>Home screen</h2>
 <div style="display: flex; justify-content: center">
-<img src="https://res.cloudinary.com/mokaweb/image/upload/v1587373920/PetSitterApp/_1.png" />
+<img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/homepage.png" />
 </div>
 <hr>
 <div style="display: flex; justify-content: center">
-<img src="https://res.cloudinary.com/mokaweb/image/upload/v1587371959/PetSitterApp/2.png" />
+<img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/HomeMobile.jpg" />
+</div>
+<hr>
+<h2>Join Room</h2>
+<div style="display: flex; justify-content: center">
+<img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/joinpage.png" />
 </div>
 <hr>
 <div style="display: flex; justify-content: center">
-<img src="https://res.cloudinary.com/mokaweb/image/upload/v1587372553/PetSitterApp/_3.png" />
+<img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/joinMobile.jpg" />
+</div>
+<hr>
+<h2>Chat Room</h2>
+<div style="display: flex; justify-content: center">
+<img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/chatroom.png" />
 </div>
 <hr>
 <div style="display: flex; justify-content: center">
-<img src="https://res.cloudinary.com/mokaweb/image/upload/v1587371958/PetSitterApp/4.png" />
+<img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/chatroomMobile.jpg" />
+</div>
+<hr>
+<h2>Messages</h2>
+<div style="display: flex; justify-content: center">
+<img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587915999/mentally-me-screenshots/messagesDesktop.png" />
 </div>
 <hr>
 <div style="display: flex; justify-content: center">
-<img src="https://res.cloudinary.com/mokaweb/image/upload/v1587372553/PetSitterApp/_5.png" />
-</div>
-<hr>
-<div style="display: flex; justify-content: center">
-<img src="https://res.cloudinary.com/mokaweb/image/upload/v1587371958/PetSitterApp/6.png" />
-</div>
-<hr>
-<div style="display: flex; justify-content: center">
-<img src="https://res.cloudinary.com/mokaweb/image/upload/v1587371958/PetSitterApp/7.png" />
-</div>
-<hr>
-<div style="display: flex; justify-content: center">
-<img src="https://res.cloudinary.com/mokaweb/image/upload/v1587371958/PetSitterApp/8.png" />
+<img src="https://res.cloudinary.com/frankie-dev/image/upload/v1587916000/mentally-me-screenshots/messagesMobile.jpg" />
 </div>
