@@ -5,6 +5,7 @@ html {
 }
 
 body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   background: linear-gradient(30deg, #0039cb, #dc39fa);
   margin: 0;
   height: 100vh;

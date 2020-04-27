@@ -22,12 +22,12 @@ const SideBar = (props) => {
           </Link>
         </li>
         <li className="sideBar-link">
-          <Link to="signup" className="sideBar-link">
+          <Link to="/signup" className="sideBar-link">
             signup
           </Link>
         </li>
         <li className="sideBar-link">
-          <Link to="login" className="sideBar-link">
+          <Link to="/login" className="sideBar-link">
             Log In
           </Link>
         </li>
