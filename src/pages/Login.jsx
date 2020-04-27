@@ -71,7 +71,7 @@ class Login extends Component {
                 required
               />
             </div>
-            <button type="submit" className="btn-desktop btn btn-primary">
+            <button className={'login-btn btn-desktop mt-20'} type="submit">
               Log In
             </button>
           </form>

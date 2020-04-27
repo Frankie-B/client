@@ -29,6 +29,26 @@
     transform: translateX(-50%);
     width: 80%;
   }
+
+  .signup-btn.btn-desktop {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #0039cb;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    width: 100%;
+  }
+
+  .signup-btn.btn-desktop:hover {
+    background: #2962ff;
+  }
+
+  .signup-btn.btn-desktop:active {
+    background: #768fff;
+  }
 }
 
 @media (min-width: 992px) {
@@ -49,10 +69,5 @@
 
   .form-group {
     width: 30vw;
-  }
-
-  .btn.btn-primary {
-    margin-right: auto;
-    width: 10vw;
   }
 }

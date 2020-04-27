@@ -1,0 +1,46 @@
+.About {
+  color: #ffffff;
+  position: fixed;
+  top: 10%;
+  left: 25%;
+  text-align: center;
+  width: 50%;
+
+  .about-heading {
+    font-size: 0.55rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-subheading {
+    font-weight: 700;
+    font-size: 0.45rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-highlight {
+    font-weight: 700;
+    text-decoration: underline;
+  }
+
+  .about-text {
+    font-size: 0.55rem;
+    line-height: 1rem;
+    word-spacing: 0.15rem;
+    text-align: center;
+    padding: 0 1%;
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .About {
+    .about-heading {
+      font-size: 2rem;
+      margin: 3rem 0;
+    }
+
+    .about-subheading {
+      font-size: 1.5rem;
+    }
+  }
+}

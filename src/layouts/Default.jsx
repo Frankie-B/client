@@ -7,10 +7,6 @@ import SideBar from '../components/SideBar/SideBar';
 import Backdrop from '../components/Backdrop/Backdrop';
 
 class Default extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
   state = {
     sideBarOpen: false,
   };
@@ -37,6 +33,18 @@ class Default extends Component {
         <SideBar show={this.state.sideBarOpen} />
         {backdrop}
         <ParticleBackground />
+        <div className="default-img-container">
+          <img
+            src="https://res.cloudinary.com/frankie-dev/image/upload/v1586406741/images/leftBrain.svg"
+            alt=""
+            className="default-img brain-left"
+          />
+          <img
+            src="https://res.cloudinary.com/frankie-dev/image/upload/v1586406741/images/rightBrain.svg"
+            alt=""
+            className="default-img brain-right"
+          />
+        </div>
         {this.props.children}
         <Footer />
       </div>

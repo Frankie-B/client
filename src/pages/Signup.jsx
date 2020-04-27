@@ -111,7 +111,7 @@ class Signup extends Component {
                 />
               </div>
 
-              <button type="submit" className="btn btn-primary btn-lg">
+              <button className={'signup-btn btn-desktop mt-20'} type="submit">
                 Submit
               </button>
             </form>

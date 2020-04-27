@@ -5,3 +5,35 @@
   padding: 0;
   width: 100vw;
 }
+
+.default-img-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.default-img {
+  height: 15rem;
+  visibility: hidden;
+}
+
+.brain-left {
+  position: fixed;
+  left: 0;
+  top: 25%;
+  z-index: 1;
+}
+
+.brain-right {
+  position: fixed;
+  right: 0;
+  top: 25%;
+  z-index: 1;
+}
+
+@media (min-width: 992px) {
+  .default-img {
+    visibility: visible;
+  }
+}
