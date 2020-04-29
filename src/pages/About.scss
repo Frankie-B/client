@@ -3,6 +3,7 @@
   position: fixed;
   top: 13%;
   left: 5%;
+  margin: 0 auto;
   text-align: center;
   width: 90%;
 
@@ -26,11 +27,10 @@
 
   .about-text {
     font-size: 0.75rem;
-    line-height: 1rem;
+    line-height: 1.5rem;
     overflow-y: scroll;
     word-spacing: 0.15rem;
     text-align: center;
-    padding: 0 5%;
     position: fixed;
     top: 30%;
     left: 10%;
