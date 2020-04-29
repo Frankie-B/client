@@ -9,7 +9,7 @@
 
   .about-heading {
     font-size: 1rem;
-    margin-bottom: 1rem;
+
     width: 100%;
   }
 
@@ -41,7 +41,6 @@
 
 @media (min-width: 992px) {
   .About {
-    text-align: center;
     .about-heading {
       font-size: 2rem;
       left: 30%;
@@ -54,10 +53,13 @@
     }
 
     .about-text {
-      top: 35%;
+      top: 40%;
+      left: 15%;
       font-size: 1rem;
       line-height: 1.5rem;
       overflow: hidden;
+      text-align: center;
+      width: 70%;
     }
   }
 }
