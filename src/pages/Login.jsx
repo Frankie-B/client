@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import './Login.scss';
 import { login } from '../utils/auth';
 import Default from '../layouts/Default';
+import './Login.scss';
 
 class Login extends Component {
   constructor(props) {
     super(props);
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleLoginClick = this.handleLoginClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   state = {
@@ -15,17 +15,16 @@ class Login extends Component {
     password: '',
   };
 
-  handleInputChange(event) {
-    event.preventDefault();
-    let name = event.target.name;
-    let value = event.target.value;
+  handleChange(e) {
+    e.preventDefault();
+    const { name, value } = e.target;
     this.setState({
       [name]: value,
     });
   }
 
-  handleLoginClick(event) {
-    event.preventDefault();
+  handleSubmit(e) {
+    e.preventDefault();
     login(this.state)
       .then(() => {
         this.setState(
@@ -45,36 +44,39 @@ class Login extends Component {
   render() {
     return (
       <Default>
-        <div className="Login">
-          <div className="login-title">Welcome back!</div>
-          <form onSubmit={this.handleLoginClick} className="login-form">
-            <div className="form-group">
-              <label>Username</label>
-              <input
-                onChange={this.handleInputChange}
-                value={this.state.username}
-                type="text"
-                name="username"
-                className="form-control"
-                placeholder="Enter username"
-                required
-              />
-            </div>
-            <div className="form-group">
-              <label>Password</label>
-              <input
-                onChange={this.handleInputChange}
-                type="password"
-                name="password"
-                className="form-control"
-                placeholder="Password"
-                required
-              />
-            </div>
-            <button className={'login-btn btn-desktop mt-20'} type="submit">
-              Log In
-            </button>
-          </form>
+        <div className="Login wrapper">
+          <div className="login-form-wrapper">
+            <h1>Log In</h1>
+            <form onSubmit={this.handleSubmit}>
+              <div className="username">
+                <label htmlFor="username">Username</label>
+                <input
+                  placeholder="Choose a username"
+                  type="text"
+                  name="username"
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="password">
+                <label htmlFor="password">Password</label>
+                <input
+                  placeholder="Password"
+                  type="password"
+                  name="password"
+                  onChange={this.handleChange}
+                />
+              </div>
+              <div className="login-account">
+                <button type="submit">Create Account</button>
+                <small>
+                  Don't have an account?
+                  <a href="/signup" className="login-link">
+                    Create Account
+                  </a>
+                </small>
+              </div>
+            </form>
+          </div>
         </div>
       </Default>
     );

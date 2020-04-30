@@ -1,75 +1,145 @@
-.Signup {
-  height: 80%;
-  .form-container {
-    background: transparent;
+/* Colors */
+/*
+dark blue: #476A6F
+light blue: #258EA6
+dark green: #519E8A
+medium green: #7EB09B
+light green: #A3C4BC
+*/
+
+.Signup.wrapper {
+  height: 80vh;
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  position: fixed;
+  top: 70px;
+  left: 1;
+  z-index: 2;
+
+  .signup-form-wrapper {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 50px #555;
+    background-color: #ffffff;
+  }
+
+  form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    text-align: center;
+    width: 100%;
+    color: #111;
+    font-weight: lighter;
   }
 
   label {
-    color: #ffffff;
+    font-size: 0.8em;
+    margin-bottom: 0.25em;
+    color: #222;
+    font-weight: lighter;
   }
 
-  .Signup-title {
-    color: #ffffff;
-    border-bottom: 2px solid #ffffff;
-    font-size: 1.5rem;
-    position: absolute;
-    top: 7%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    text-align: center;
-    width: 80%;
-  }
-
-  .signup-form {
-    position: absolute;
-    top: 12%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    width: 80%;
-  }
-
-  .signup-btn.btn-desktop {
-    color: #fff !important;
-    text-transform: uppercase;
-    text-decoration: none;
-    background: #0039cb;
-    padding: 10px;
+  input {
+    padding: 10px 10px;
     border-radius: 5px;
-    display: inline-block;
-    border: none;
+    outline: none;
+    border: 1px solid #cfcfcf;
+  }
+
+  input::placeholder {
+    font-size: 1.2em;
+    font-weight: lighter;
+    color: #999;
+  }
+
+  input.error {
+    border: 1px solid red;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 0.65rem;
+    display: relative;
+  }
+
+  .first-name {
+    margin-right: 1%;
+  }
+
+  .last-name {
+    margin-left: 1%;
+  }
+
+  .first-name,
+  .last-name,
+  .email,
+  .username,
+  .password {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+
+  .first-name,
+  .last-name {
+    width: 49%;
+  }
+
+  .email,
+  .username,
+  .password {
     width: 100%;
   }
 
-  .signup-btn.btn-desktop:hover {
-    background: #2962ff;
+  .create-account {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .signup-btn.btn-desktop:active {
-    background: #768fff;
+  .create-account button {
+    background-color: #0039cb;
+    color: #fff;
+    border: 2px solid #fff;
+    width: 100%;
+    margin-top: 1em;
+    padding: 8px 0px;
+    font-size: 1em;
+    font-weight: lighter;
+    letter-spacing: 1px;
+    margin-bottom: 0.25em;
+  }
+
+  .create-account button:hover {
+    color: #ffffff;
+    background-color: #2962ff;
+    border: 2px solid #0039cb;
+  }
+
+  .create-account small {
+    color: #999;
+    font-weight: lighter;
+  }
+
+  .signup-link {
+    margin-left: 0.5rem;
   }
 }
 
-@media (min-width: 992px) {
-  .Signup {
-    .Signup-title {
-      font-size: 2rem;
-      top: 9%;
-      width: 30%;
-    }
-
-    .signup-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      top: 16%;
-      height: 70vh;
-      width: 30%;
-    }
-  }
-
-  .form-group {
-    width: 30vw;
+@media (min-width: 768px) {
+  .Signup.wrapper {
+    width: 100%;
   }
 }

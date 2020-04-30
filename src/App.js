@@ -1,8 +1,7 @@
 import React from 'react';
 import Home from './pages/Home';
 import About from './pages/About';
-// import Signup from './pages/Signup';
-import Signup from './components/Form/Signup';
+import Signup from './pages/Signup';
 import Login from './pages/Login';
 import Join from './components/Join/Join';
 import Chat from './components/Chat/Chat';

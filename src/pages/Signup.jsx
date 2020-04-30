@@ -1,119 +1,185 @@
 import React, { Component } from 'react';
+import Default from '../layouts/Default';
 import './Signup.scss';
 import { signup } from '../utils/auth';
-import Default from '../layouts/Default';
 
-class Signup extends Component {
+const emailRegex = RegExp(
+  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/
+);
+
+const formValid = ({ formErrors, ...rest }) => {
+  let valid = true;
+
+  // validate form errors being empty
+  Object.values(formErrors).forEach((val) => {
+    val.length > 0 && (valid = false);
+  });
+
+  // validate the form was filled out
+  Object.values(rest).forEach((val) => {
+    val === null && (valid = false);
+  });
+
+  return valid;
+};
+
+class App extends Component {
   constructor(props) {
     super(props);
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.handleSignupClick = this.handleSignupClick.bind(this);
+
+    this.state = {
+      firstName: null,
+      lastName: null,
+      email: null,
+      password: null,
+      formErrors: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        password: '',
+      },
+    };
   }
 
-  state = {
-    firstName: '',
-    lastName: '',
-    username: '',
-    email: '',
-    password: '',
+  handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (formValid(this.state)) {
+      signup(this.state)
+        .then(() => {
+          this.props.history.push('/login');
+        })
+
+        .catch((error) => {
+          this.setState({ error: error.response && error.response.data });
+        });
+    } else {
+      console.error('FORM INVALID - DISPLAY ERROR MESSAGE');
+    }
   };
 
-  handleInputChange(event) {
-    event.preventDefault();
-    let name = event.target.name;
-    let value = event.target.value;
-    this.setState({
-      [name]: value,
-    });
-  }
-
-  handleSignupClick(e) {
+  handleChange = (e) => {
     e.preventDefault();
-    signup(this.state)
-      .then(() => {
-        this.props.history.push('/login');
-      })
+    const { name, value } = e.target;
+    let formErrors = { ...this.state.formErrors };
 
-      .catch((error) => {
-        this.setState({ error: error.response && error.response.data });
-      });
-  }
+    switch (name) {
+      case 'firstName':
+        formErrors.firstName =
+          value.length < 3 ? 'minimum 3 characters required' : '';
+        break;
+      case 'lastName':
+        formErrors.lastName =
+          value.length < 3 ? 'minimum 3 characters required' : '';
+        break;
+      case 'email':
+        formErrors.email = emailRegex.test(value)
+          ? ''
+          : 'invalid email address';
+        break;
+      case 'username':
+        formErrors.lastName =
+          value.length < 3 ? 'minimum 3 characters required' : '';
+        break;
+      case 'password':
+        formErrors.password =
+          value.length < 6 ? 'minimum 6 characters required' : '';
+        break;
+      default:
+        break;
+    }
+
+    this.setState({ formErrors, [name]: value }, () => console.log(this.state));
+  };
 
   render() {
+    const { formErrors } = this.state;
+
     return (
       <Default>
-        <div className="Signup">
-          <div className="form-container">
-            <h1 className="Signup-title">Sign up</h1>
-            <form onSubmit={this.handleSignupClick} className="signup-form">
-              <div className="form-group">
-                <label>First name</label>
+        <div className="Signup wrapper">
+          <div className="signup-form-wrapper">
+            <h1>Create Account</h1>
+            <form onSubmit={this.handleSubmit} noValidate>
+              <div className="first-name">
+                <label htmlFor="firstName">First Name</label>
                 <input
-                  onChange={this.handleInputChange}
-                  value={this.state.firstName}
+                  className={formErrors.firstName.length > 0 ? 'error' : null}
+                  placeholder="First Name"
                   type="text"
-                  className="form-control"
-                  placeholder="Enter First Name"
                   name="firstName"
-                  pattern="^[A-Za-z]+$"
-                  required
+                  noValidate
+                  onChange={this.handleChange}
                 />
+                {formErrors.firstName.length > 0 && (
+                  <span className="error-message">{formErrors.firstName}</span>
+                )}
               </div>
-              <div className="form-group">
-                <label>Last name</label>
+              <div className="last-name">
+                <label htmlFor="lastName">Last Name</label>
                 <input
-                  onChange={this.handleInputChange}
-                  value={this.state.lastName}
-                  className="form-control"
+                  className={formErrors.lastName.length > 0 ? 'error' : null}
+                  placeholder="Last Name"
                   type="text"
-                  placeholder="Enter Last Name"
                   name="lastName"
-                  pattern="^[A-Za-z]+$"
-                  required
+                  noValidate
+                  onChange={this.handleChange}
                 />
+                {formErrors.lastName.length > 0 && (
+                  <span className="error-message">{formErrors.lastName}</span>
+                )}
               </div>
-              <div className="form-group">
-                <label>Email address</label>
+              <div className="email">
+                <label htmlFor="email">Email</label>
                 <input
-                  onChange={this.handleInputChange}
-                  value={this.state.email}
-                  className="form-control"
+                  className={formErrors.email.length > 0 ? 'error' : null}
+                  placeholder="Email"
                   type="email"
-                  placeholder="you@address.com"
                   name="email"
-                  pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
-                  required
+                  noValidate
+                  onChange={this.handleChange}
                 />
+                {formErrors.email.length > 0 && (
+                  <span className="error-message">{formErrors.email}</span>
+                )}
               </div>
-              <div className="form-group">
-                <label>Username</label>
+              <div className="username">
+                <label htmlFor="username">Username</label>
                 <input
-                  onChange={this.handleInputChange}
-                  value={this.state.username}
-                  className="form-control"
+                  className={formErrors.lastName.length > 0 ? 'error' : null}
+                  placeholder="Choose a username"
                   type="text"
-                  placeholder="Enter a username"
                   name="username"
-                  pattern="[A-Za-z0-9_]{1,15}"
-                  required
+                  noValidate
+                  onChange={this.handleChange}
                 />
+                {formErrors.lastName.length > 0 && (
+                  <span className="error-message">{formErrors.username}</span>
+                )}
               </div>
-              <div className="form-group">
-                <label>Password</label>
+              <div className="password">
+                <label htmlFor="password">Password</label>
                 <input
-                  onChange={this.handleInputChange}
-                  value={this.state.password}
-                  className="form-control"
-                  type="password"
+                  className={formErrors.password.length > 0 ? 'error' : null}
                   placeholder="Password"
+                  type="password"
                   name="password"
-                  required
+                  noValidate
+                  onChange={this.handleChange}
                 />
+                {formErrors.password.length > 0 && (
+                  <span className="error-message">{formErrors.password}</span>
+                )}
               </div>
-
-              <button className={'signup-btn btn-desktop mt-20'} type="submit">
-                Submit
-              </button>
+              <div className="create-account">
+                <button type="submit">Create Account</button>
+                <small>
+                  Already Have an Account?
+                  <a href="/login" className="signup-link">
+                    Log In
+                  </a>
+                </small>
+              </div>
             </form>
           </div>
         </div>
@@ -122,4 +188,4 @@ class Signup extends Component {
   }
 }
 
-export default Signup;
+export default App;
