@@ -16,7 +16,7 @@ You can check the live application here:
 
 https://mentally-me-chat-v1.netlify.app/
 
-Guest Account- Username: Test | password: Test123
+Guest Account- Username: Test | password: Test123 | Room: General
 
 Created by: Francis Kasozi Bukenya - A Full Stack Web Development IronHack graduate.
 
