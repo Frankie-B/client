@@ -45,7 +45,7 @@ export default function Join(props) {
           to={`/chat?name=${user.username}&room=${room}`}
         >
           <button className={'button mt-20'} type="submit">
-            Join A Room
+            Join Room
           </button>
         </Link>
         <Link onClick={handleLogout} to="/">
